@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Bots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root { --accent: #047857; --text: #111827; --muted: #4b5563; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f4f5f7; color: var(--text); min-height: 100vh; padding: 2.5rem 1.5rem 4rem; }
+    header { max-width: 1120px; margin: 0 auto 2.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 700; } .logo span { color: var(--accent); }
+    .back { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    h1 { max-width: 1120px; margin: 0 auto 1.75rem; font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: #065f46; }
+    .grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.1rem; }
+    .tile {
+      background: #6ee7b7;
+      border: 1px solid #34d399;
+      border-radius: 20px;
+      padding: 1.6rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: 150px;
+      justify-content: center;
+    }
+    .tile:hover { background: #34d399; transform: translateY(-4px); box-shadow: 0 12px 32px rgba(5,150,105,0.28); }
+    .icon { width: 36px; height: 36px; color: var(--accent); stroke-width: 1.75; }
+    .label { font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
+    .sub { font-size: 0.75rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Grok<span>Launchpad</span></div>
+    <a class="back" href="index.html">← Back</a>
+  </header>
+  <h1>School Bots</h1>
+  <div class="grid">
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="school" class="icon"></i><div class="label">School Bot</div><div class="sub">File & grade sync</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="layout" class="icon"></i><div class="label">Canvas Bot</div><div class="sub">Titles & pages</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="clipboard-list" class="icon"></i><div class="label">Infinite Campus</div><div class="sub">Absences & work</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="file-text" class="icon"></i><div class="label">iCEV Bot</div><div class="sub">Score matching</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="check-circle" class="icon"></i><div class="label">ZipGrade Bot</div><div class="sub">Answer key check</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="star" class="icon"></i><div class="label">Minga Bot</div><div class="sub">PBIS points</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="bar-chart" class="icon"></i><div class="label">Google Forms</div><div class="sub">Response summaries</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="newspaper" class="icon"></i><div class="label">Forensics Newsletters</div><div class="sub">Daily crime news</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="dumbbell" class="icon"></i><div class="label">Wrestling Bot</div><div class="sub">Practice plans</div></a>
+    <a class="tile" href="https://grok.com" target="_blank"><i data-lucide="folder" class="icon"></i><div class="label">Drive Bot</div><div class="sub">Organize school files</div></a>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

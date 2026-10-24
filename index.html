@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grok Launchpad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --text: #111827;
+      --muted: #374151;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f4f5f7;
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    header {
+      max-width: 1120px;
+      margin: 0 auto 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 1.65rem; font-weight: 700; letter-spacing: -0.03em; }
+    .logo span { color: #4f46e5; }
+    .user { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+    h2 {
+      max-width: 1120px;
+      margin: 0 auto 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .grid {
+      max-width: 1120px;
+      margin: 0 auto 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.1rem;
+    }
+    .tile {
+      border-radius: 20px;
+      padding: 1.6rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: 150px;
+      justify-content: center;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .tile:hover {
+      transform: translateY(-4px);
+      filter: brightness(0.95);
+    }
+    .icon { width: 36px; height: 36px; stroke-width: 1.75; }
+    .label { font-weight: 600; font-size: 0.95rem; line-height: 1.25; }
+    .sub { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+
+    /* Unique colors for Quick Actions */
+    .chat { background: #a5b4fc; } .chat .icon { color: #3730a3; }
+    .search { background: #67e8f9; } .search .icon { color: #0e7490; }
+    .image { background: #f9a8d4; } .image .icon { color: #9d174d; }
+    .data { background: #86efac; } .data .icon { color: #166534; }
+    .write { background: #fde047; } .write .icon { color: #a16207; }
+    .code { background: #fdba74; } .code .icon { color: #9a3412; }
+
+    /* Category colors */
+    .green { background: #34d399; } .green .icon { color: #065f46; }
+    .blue { background: #60a5fa; } .blue .icon { color: #1e3a8a; }
+    .purple { background: #a78bfa; } .purple .icon { color: #5b21b6; }
+    .primary { background: #f472b6; } .primary .icon { color: #9d174d; }
+
+    /* Unique colors for Daily Shortcuts */
+    .morning { background: #fcd34d; } .morning .icon { color: #92400e; }
+    .tasks { background: #6ee7b7; } .tasks .icon { color: #065f46; }
+    .finance { background: #c4b5fd; } .finance .icon { color: #5b21b6; }
+    .ideas { background: #fca5a5; } .ideas .icon { color: #991b1b; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Grok<span>Launchpad</span></div>
+    <div class="user">Kiel's shortcuts</div>
+  </header>
+
+  <h2>Grok Quick Actions</h2>
+  <div class="grid">
+    <a class="tile chat" href="https://grok.com" target="_blank"><i data-lucide="message-circle" class="icon"></i><div class="label">New Chat</div><div class="sub">Start fresh</div></a>
+    <a class="tile search" href="https://grok.com" target="_blank"><i data-lucide="search" class="icon"></i><div class="label">Search / Research</div><div class="sub">Web + X</div></a>
+    <a class="tile image" href="https://grok.com" target="_blank"><i data-lucide="image" class="icon"></i><div class="label">Image / Imagine</div><div class="sub">Generate or edit</div></a>
+    <a class="tile data" href="https://grok.com" target="_blank"><i data-lucide="bar-chart-3" class="icon"></i><div class="label">Analyze Data</div><div class="sub">Sheets, files, etc.</div></a>
+    <a class="tile write" href="https://grok.com" target="_blank"><i data-lucide="pen-line" class="icon"></i><div class="label">Write / Draft</div><div class="sub">Email, posts, plans</div></a>
+    <a class="tile code" href="https://grok.com" target="_blank"><i data-lucide="code" class="icon"></i><div class="label">Code / Debug</div><div class="sub">Scripts & apps</div></a>
+  </div>
+
+  <h2>Bot Categories</h2>
+  <div class="grid">
+    <a class="tile green" href="school-bots.html"><i data-lucide="graduation-cap" class="icon"></i><div class="label">School Bots</div><div class="sub">Teaching & grades</div></a>
+    <a class="tile blue" href="social-media-bots.html"><i data-lucide="share-2" class="icon"></i><div class="label">Social Media</div><div class="sub">Content team</div></a>
+    <a class="tile purple" href="personal-bots.html"><i data-lucide="wallet" class="icon"></i><div class="label">Personal & Finance</div><div class="sub">Email, cards, etc.</div></a>
+    <a class="tile primary" href="https://grok.com" target="_blank"><i data-lucide="compass" class="icon"></i><div class="label">Primary Grok Bot</div><div class="sub">Routes everything</div></a>
+  </div>
+
+  <h2>Daily Shortcuts</h2>
+  <div class="grid">
+    <a class="tile morning" href="https://grok.com" target="_blank"><i data-lucide="sunrise" class="icon"></i><div class="label">Morning Brief</div><div class="sub">Email + calendar</div></a>
+    <a class="tile tasks" href="https://grok.com" target="_blank"><i data-lucide="check-square" class="icon"></i><div class="label">Today's Tasks</div><div class="sub">What needs doing</div></a>
+    <a class="tile finance" href="https://grok.com" target="_blank"><i data-lucide="trending-up" class="icon"></i><div class="label">Finance Check</div><div class="sub">Cards & markets</div></a>
+    <a class="tile ideas" href="https://grok.com" target="_blank"><i data-lucide="lightbulb" class="icon"></i><div class="label">Content Ideas</div><div class="sub">Teaching AI tips</div></a>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
