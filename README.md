@@ -1,2 +1,3 @@
 # grok-launchpad
-Personal Grok and Grok Bots dashboard launcher
+
+This site has been terminated. The content has been removed.
